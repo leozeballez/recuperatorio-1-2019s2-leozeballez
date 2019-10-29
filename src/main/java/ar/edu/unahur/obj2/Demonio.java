@@ -5,11 +5,25 @@ import java.util.List;
 
 public abstract class Demonio {
 
+    private Arma arma;
     private int maldad;
     private List<Alma> almasCazadas = new ArrayList<>();
 
-    public Demonio(int maldad) {
+    public Demonio(int maldad, Arma arma) {
         this.maldad = maldad;
+        this.arma = arma;
+    }
+
+    public void aumentarMaldad(int maldad) {
+        this.maldad += maldad;
+    }
+
+    public Arma getArma() {
+        return arma;
+    }
+
+    public void setArma(Arma arma) {
+        this.arma = arma;
     }
 
     public void cazar(Lugar lugar) {
@@ -50,4 +64,15 @@ public abstract class Demonio {
     protected abstract void atormentar(Alma a);
     protected abstract boolean puedoCazarlo(Alma a);
 
+    public int poder(){
+        return arma.getPoder() * maldad * almasCazadas.size();
+    }
+
+    public void quiarAlma() {
+        almasCazadas.remove(0);
+    }
+
+    public void quitarAlmas() {
+        almasCazadas.clear();
+    }
 }
