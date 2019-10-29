@@ -9,4 +9,5 @@ public interface Alma {
     void setValor(int valor);
     void setFriolenta(boolean friolenta);
 
+
 }

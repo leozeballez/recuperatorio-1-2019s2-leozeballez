@@ -16,6 +16,8 @@ public abstract class Demonio {
         // para evitar el error de concurrent modification
         List<Alma> copiaDeAlmas = new ArrayList<>(lugar.getAlmas());
         copiaDeAlmas.stream().forEach(alma -> cazarOAtormentar(lugar, alma));
+        lugar.esconderAlmas();
+        lugar.almasSalenDeEscondite();
     }
 
     protected void cazarOAtormentar(Lugar lugar, Alma alma) {
