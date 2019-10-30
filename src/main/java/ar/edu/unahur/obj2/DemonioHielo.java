@@ -2,8 +2,8 @@ package ar.edu.unahur.obj2;
 
 public class DemonioHielo extends Demonio {
 
-    public DemonioHielo(int maldad) {
-        super(maldad);
+    public DemonioHielo(int maldad, Arma arma) {
+        super(maldad, arma);
     }
 
     @Override

@@ -12,7 +12,7 @@ public class Lugar implements EsconderAlmas {
     public Lugar(int cantEscondites, List<Alma> almas) {
         this.cantEscondites = cantEscondites;
         this.almas = almas;
-        this.escondidas = new ArrayList<>(cantEscondites);
+        this.escondidas = new ArrayList<>();
     }
 
     public List<Alma> getAlmas() {
@@ -22,8 +22,10 @@ public class Lugar implements EsconderAlmas {
     public List<Alma> getEscondidas() { return escondidas; }
 
     public void esconderAlma(Alma alma) {
-        escondidas.add(alma);
-        almas.remove(alma);
+        if(almas.contains(alma)) {
+            escondidas.add(alma);
+            almas.remove(alma);
+        }
     }
 
     public void quitarAlma(Alma alma) {
@@ -43,5 +45,5 @@ public class Lugar implements EsconderAlmas {
             almas.add(escondidas.get(i));
         }
         escondidas.clear();
-    };
+    }
 }

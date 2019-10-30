@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Paraiso extends Lugar {
 
-    public Paraiso(int cantEscondites, List<Alma> almas) {
-        super(cantEscondites, almas);
+    public Paraiso(List<Alma> almas) {
+        super(10, almas);
     }
 
     @Override

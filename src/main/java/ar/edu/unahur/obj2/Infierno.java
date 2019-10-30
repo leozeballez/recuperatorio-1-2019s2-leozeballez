@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Infierno extends Lugar {
 
-    public Infierno(int cantEscondites, List<Alma> almas) {
-        super(cantEscondites, almas);
+    public Infierno(List<Alma> almas) {
+        super(2, almas);
     }
 
     @Override

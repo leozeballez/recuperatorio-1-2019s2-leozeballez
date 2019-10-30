@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Purgatorio extends Lugar {
 
-    public Purgatorio(int cantEscondites, List<Alma> almas) {
-        super(cantEscondites, almas);
+    public Purgatorio(List<Alma> almas) {
+        super(5, almas);
     }
 
     @Override
