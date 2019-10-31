@@ -68,7 +68,7 @@ public abstract class Demonio {
         return arma.getPoder() * maldad * almasCazadas.size();
     }
 
-    public void quiarAlma() {
+    public void quitarAlma() {
         almasCazadas.remove(0);
     }
 

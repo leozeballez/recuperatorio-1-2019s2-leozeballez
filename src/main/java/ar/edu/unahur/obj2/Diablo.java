@@ -37,8 +37,8 @@ public class Diablo {
     public void premiarYCastigar(Demonio dem1, Demonio dem2) {
         if(isContento()) {
             dem1.aumentarMaldad(10);
-            dem2.quiarAlma();
-            dem2.quiarAlma();
+            dem2.quitarAlma();
+            dem2.quitarAlma();
         } else {
             dem1.aumentarMaldad(1);
             dem2.quitarAlmas();
